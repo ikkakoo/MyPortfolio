@@ -4,35 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="/styles/themes/defaultTheme.css"id="theme--link">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/responsive.css">
     <title>My Portfolio</title>
 </head>
 <body>
     
-    <nav class="navigation">
-        <ul class="nav--list">
-            <li>Home</li>
-            <li>Projects</li>
-            <li>About</li>
-            <li>Contact</li>
-        </ul>
-    </nav>
+    <div class="container">
+        <!-- Navigation Pane -->
+        <nav class="navigation">
+            <div class="theme--wrapper">
+                <div class="theme" id="dark"></div>
+                <div class="theme" id="defaultTheme"></div>
+            </div>
+            
+            <ul class="nav--list">
+                <li class="nav--item">Home</li>
+                <li class="nav--item">Projects</li>
+                <li class="nav--item">About</li>
+                <li class="nav--item">Contact</li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <main class="hero--section">
+            <div class="photo--wrapper">
+                <img src="./images/photo.jpg" alt="" class="photo">
+                <h2>Irakli Dzvelaia</h2>
+            </div>
+            
+        </main>
     
-    <main class="hero--section">
-
-    </main>
-
-    <div class="projects--section">
-
+        <!-- Projects Section -->
+        <div class="projects--section">
+            <!-- <p>My Projects</p> -->
+            <div class="project project1"></div>
+            <div class="project project2"></div>
+            <div class="project project3"></div>
+            <!-- <p>View More</p> -->
+        </div>
+    
+        <!-- Skills Section -->
+        <div class="skills--section">
+            <!-- <p>More About Me</p> -->
+            <div class="about"></div>
+            <div class="skills--wrapper">
+                <div class="division--line"></div>
+                <div class="skills"></div>
+            </div>
+        </div>
+    
+        <!-- Contact Section -->
+        <div class="contact--section">
+                <!-- <form action="" class="contact--form">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                    <input type="text">
+                </form>
+                <textarea name="" id="" cols="30" rows="10"></textarea> -->
+        </div>
     </div>
 
-    <div class="skills--section">
-
-    </div>
-
-    <form action="">
-
-    </form>
-
+    <script src="./js/script.js"></script>
 </body>
 </html>
