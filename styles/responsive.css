@@ -9,7 +9,6 @@
 
 @media (max-width: 1285px) {
     .projects--section {
-        flex-wrap: wrap;
         height: auto;
     }
 }
@@ -52,7 +51,7 @@
         color: white;
         width: 100%;
         height: auto;
-        transition: 0.8s;
+        transition: 0.5s;
     }
     
     .nav--list.active {

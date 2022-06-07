@@ -8,6 +8,7 @@
 /* Body Styles */
 body {
     scroll-behavior: smooth;
+    transition: 0.3s;
 }
 .container {
     display: block;
@@ -17,6 +18,7 @@ body {
 .navigation {
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
+    transition: 1s;
     display: grid;
     grid-template-columns: 1fr 5fr 1fr;
     justify-content: center;
@@ -31,19 +33,21 @@ body {
 }
 .theme--wrapper {
     display: flex;
-    gap: 1em;
+    gap: 0.5em;
 }
 .theme {
     border: 1px solid rgb(42, 49, 120);
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border-radius: 50px;
 }
 #dark {
     background-color: #273238;
+    cursor: crosshair;
 }
 #defaultTheme {
     background-color: #E8E8E8;
+    cursor: crosshair;
 }
 .hamburger {
     display: none;
@@ -60,7 +64,8 @@ body {
 
 }
 .nav--item {
-    transition: 0.7s ease;
+    transition: 0.2s ease;
+    cursor: pointer;
 }
 .nav--item:hover {
     color: rgb(21, 106, 190);
@@ -72,6 +77,7 @@ body {
     background-color: var(--secondary-bg-color);
     color: var(--primary-text-color);
     border-top: 2px solid var(--primary-border-color);
+    transition: 1s;
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
@@ -92,21 +98,47 @@ body {
 
 /* Projects Section Styles */
 .project {
-    width: 390px;
-    height: 318px;
-    background: rgb(156, 211, 255);
+    width: 442px;
+    height: auto;
+    background-color: var(--secondary-bg-color);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em
+}
+.description {
+    display: flex;
+    gap: 1em;
+    width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+#view--more {
+    cursor: pointer;
 }
 .projects--section {
-    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
     border-top: 2px solid var(--primary-border-color);
+    transition: 1s;
+    height: auto;
+
+    
+}
+.projects--wrapper {
     display: flex;
-    gap: 48px;
-    justify-content: center;
     align-items: center;
-    padding: 48px;
+    flex-wrap: wrap;
+    padding: 2em;
+    gap: 2em;
 }
 
 /* Skills Section Styles */
@@ -120,6 +152,7 @@ body {
     background-color: var(--secondary-bg-color);
     color: var(--primary-text-color);
     border-top: 2px solid var(--primary-border-color);
+    transition: 1s;
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
@@ -153,4 +186,5 @@ body {
     background-color: var(--primary-bg-color);
     color: var(--primary-text-color);
     border-top: 2px solid var(--primary-border-color);
+    transition: 1s;
 }

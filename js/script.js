@@ -29,21 +29,68 @@ function themeSelector() {
 
     defaultTheme.addEventListener("click", () => {
         activateTheme(defaultTheme);
-        localStorage.setItem("theme", defaultTheme.id);
+        localStorage.setItem("theme", "defaultTheme");
     });
 
     dark.addEventListener("click", () => {
         activateTheme(dark);
-        localStorage.setItem("theme", dark.id);
+        localStorage.setItem("theme", "dark");
     });
 
 
-    // console.log(localStorage.getItem("theme"));
-    // console.log(currentTheme);
-
+    console.log(localStorage.getItem("theme"));
+    () => {
+        themeFileLink.setAttribute("href", `/styles/themes/${currentTheme}.css`);
+    };
 }
 
 themeSelector();
 
 // Async-Await for Projects Section
+// fetch api
+async function fetchData() {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    const data = await response.json();
+    
+    // create project div
+    function createProjects(data) {
+        projectsWrapper = document.querySelector(".projects--wrapper");
+        projectDiv = document.createElement('div');
+        projectDiv.classList.add('project');
+        projectDiv.classList.add(`project${data.id}`);
+        projectHeader = document.createElement('h3');
+        projectDescription = document.createElement('p');
+        projectPhoto = document.createElement('img');
+        projectHeader.classList.add("project--header");
+        projectDescription.classList.add("project--body");
+        descriptionDiv = document.createElement('div')
+        descriptionDiv.classList.add('description')
+
+        projectsWrapper.appendChild(projectDiv);
+        projectDiv.appendChild(projectPhoto);
+        descriptionDiv.appendChild(projectHeader);
+        descriptionDiv.appendChild(projectDescription);
+        projectDiv.appendChild(descriptionDiv);
+
+        projectDescription.innerHTML = data.body;
+        projectHeader.innerHTML = data.title;
+        projectPhoto.setAttribute('src', "./images/project1.png")
+    }
+    
+    for (let i of data) {
+        if (i.id <= 10) {
+            createProjects(i)
+        }
+    }
+
+}
+
+
+fetchData();
+
+// View more functionality
+let viewMore = document.getElementById('view--more');
+viewMore.addEventListener('click', () => {
+    
+})
 
