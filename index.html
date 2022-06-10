@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="/styles/themes/defaultTheme.css" id="theme--link">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/responsive.css">
+    <script src="https://kit.fontawesome.com/1b4b650ebb.js" crossorigin="anonymous"></script>
     <title>My Portfolio</title>
 </head>
 <body>
     
     <div class="container">
+        
         <!-- Navigation Pane -->
         <nav class="navigation">
             <div class="theme--wrapper">
@@ -20,10 +22,10 @@
             </div>
             
             <ul class="nav--list">
-                <li class="nav--item">Home</li>
-                <li class="nav--item">Projects</li>
-                <li class="nav--item">About</li>
-                <li class="nav--item">Contact</li>
+                <a href="#home"><li class="nav--item">Home</li></a>
+                <a href="#projects"><li class="nav--item">Projects</li></a>
+                <a href="#skills"><li class="nav--item">About</li></a>
+                <a href="#contact"><li class="nav--item">Contact</li></a>
             </ul>
 
             <div class="hamburger">
@@ -34,7 +36,7 @@
         </nav>
         
         <!-- Hero Section -->
-        <main class="hero--section">
+        <main class="hero--section" id="home">
             <div class="photo--wrapper">
                 <!-- <img src="./images/photo.jpg" alt="" class="photo"> -->
                 <h2>Irakli Dzvelaia</h2>
@@ -43,7 +45,7 @@
         </main>
     
         <!-- Projects Section -->
-        <div class="projects--section">
+        <div class="projects--section" id="projects">
             <h2 id="my--projects">My Projects</h2>
             <div class="projects--wrapper">
                 <!-- main projects -->
@@ -54,29 +56,135 @@
         </div>
     
         <!-- Skills Section -->
-        <div class="skills--section">
-            <!-- <p>More About Me</p> -->
+        <div class="skills--section" id="skills">
             
+            <!-- <p>More About Me</p> -->
             <div class="about">
-                <h2>More About Me:</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit eaque esse inventore explicabo ullam molestiae accusamus ad! Voluptatum recusandae commodi, at in eius quidem ut sunt doloribus ipsa reiciendis est, aspernatur quisquam cum, aliquid dicta explicabo? Dolor, doloremque facilis, expedita aliquam, beatae dolore nesciunt porro eligendi accusamus ut itaque doloribus.</p>
+                <h2>What I Enjoy:</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eius libero excepturi. Perspiciatis sequi voluptates, pariatur illum id ullam! Repudiandae laboriosam atque praesentium ut ducimus numquam illo aperiam facilis quos quo optio, et assumenda cum reprehenderit corrupti quisquam! Nemo aspernatur ratione ipsam voluptates nostrum ipsum ducimus iure vero officiis? Laborum aliquid harum deserunt quaerat magnam neque! Illum expedita vitae accusamus fugit? Dolore dolores pariatur eos tempore odit quibusdam asperiores modi voluptatibus fugiat, a delectus saepe nobis incidunt veniam cupiditate minus excepturi quam voluptates iste quae? Sed eveniet magnam iure molestiae totam eaque sunt? Sapiente molestiae iure itaque quos veniam facere distinctio adipisci possimus minus ad, doloremque excepturi, iusto dolor voluptates eius dolorum labore nobis delectus vel, laudantium rem voluptatibus unde! Aliquam voluptatum deleniti eveniet fugiat accusamus rem molestiae amet. Suscipit nobis enim, quis totam velit harum quas obcaecati deleniti qui laborum soluta repudiandae nesciunt. Suscipit molestias, sunt doloribus, obcaecati, alias reprehenderit vero aspernatur natus veritatis nostrum vitae atque deleniti. Maxime fugiat nostrum id ipsa at iure reprehenderit dignissimos quasi, illo tenetur. Voluptatum unde veritatis pariatur consequuntur harum, autem maiores aspernatur excepturi fuga et? Suscipit accusamus consectetur ea officiis provident fuga, cumque minus consequuntur cupiditate repellendus ipsam voluptates reprehenderit quo distinctio../p>
             </div>
-            <div class="division--line"></div>
-            <div class="skills--wrapper">
 
+            <!-- division line -->
+            <div class="division--line"></div>
+
+            <!-- skill proficiency -->
+            <div class="skills--wrapper">
+                <!-- python -->
+                <div class="skill--container">
+                    <h3>Python</h3>
+                    <div class="levels--container">
+                        <div class="level level1"></div>
+                        <div class="level level2"></div>
+                        <div class="level level3"></div>
+                        <div class="level level4"></div>
+                        <div class="level level5"></div>
+                        <div class="level level6"></div>
+                        <div class="level level7"></div>
+                        <div class="level level8"></div>
+                        <div class="level level9"></div>
+                        <div class="level level10"></div>
+                    </div>
+                </div>
+                <!-- javascript -->
+                <div class="skill--container">
+                    <h3>Javascript</h3>
+                    <div class="levels--container">
+                        <div class="level level1"></div>
+                        <div class="level level2"></div>
+                        <div class="level level3"></div>
+                        <div class="level level4"></div>
+                        <div class="level level5"></div>
+                        <div class="level level6"></div>
+                        <div class="level level7"></div>
+                        <div class="level level8"></div>
+                        <div class="level level9"></div>
+                        <div class="level level10"></div>
+                    </div>
+                </div>
+                
+                <!-- django -->
+                <div class="skill--container">
+                    <h3>Django</h3>
+                    <div class="levels--container">
+                        <div class="level level1"></div>
+                        <div class="level level2"></div>
+                        <div class="level level3"></div>
+                        <div class="level level4"></div>
+                        <div class="level level5"></div>
+                        <div class="level level6"></div>
+                        <div class="level level7"></div>
+                        <div class="level level8"></div>
+                        <div class="level level9"></div>
+                        <div class="level level10"></div>
+                    </div>
+                </div>
+                <!-- react -->
+                <div class="skill--container">
+                    <h3>React</h3>
+                    <div class="levels--container">
+                        <div class="level level1"></div>
+                        <div class="level level2"></div>
+                        <div class="level level3"></div>
+                        <div class="level level4"></div>
+                        <div class="level level5"></div>
+                        <div class="level level6"></div>
+                        <div class="level level7"></div>
+                        <div class="level level8"></div>
+                        <div class="level level9"></div>
+                        <div class="level level10"></div>
+                    </div>
+                </div>
+                <!-- html -->
+                <div class="skill--container">
+                    <h3>HTML</h3>
+                    <div class="levels--container">
+                        <div class="level level1"></div>
+                        <div class="level level2"></div>
+                        <div class="level level3"></div>
+                        <div class="level level4"></div>
+                        <div class="level level5"></div>
+                        <div class="level level6"></div>
+                        <div class="level level7"></div>
+                        <div class="level level8"></div>
+                        <div class="level level9"></div>
+                        <div class="level level10"></div>
+                    </div>
+                </div>
+                <!-- css -->
+                <div class="skill--container">
+                    <h3>CSS</h3>
+                    <div class="levels--container">
+                        <div class="level level1"></div>
+                        <div class="level level2"></div>
+                        <div class="level level3"></div>
+                        <div class="level level4"></div>
+                        <div class="level level5"></div>
+                        <div class="level level6"></div>
+                        <div class="level level7"></div>
+                        <div class="level level8"></div>
+                        <div class="level level9"></div>
+                        <div class="level level10"></div>
+                    </div>
+                </div>
             </div>
         </div>
     
         <!-- Contact Section -->
-        <div class="contact--section">
-                <!-- <form action="" class="contact--form">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                    <input type="text">
-                </form>
-                <textarea name="" id="" cols="30" rows="10"></textarea> -->
+        <div class="contact--section--container" id="contact">
+            <div class="form--conatiner">
+                <div id="contact--section--header">Get In Touch</div>
+                <div class="contact--section">
+                    <input type="text" placeholder="enter first name..." class="inp">
+                    <input type="text" placeholder="enter last name..." class="inp">
+                    <input type="text" placeholder="enter email..." class="inp">
+                    <input type="text" placeholder="subject..." class="inp">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="type your text here..." class="text"></textarea>
+                    <button type="submit" id="send-btn">Send</button>
+                </div>
+                <img src="./images/msg logo.png" alt="" class="contact--logo">
+            </div>    
         </div>
+
     </div>
 
     <script src="./js/script.js"></script>

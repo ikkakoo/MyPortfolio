@@ -1,7 +1,9 @@
 :root {
     --primary-bg-color: #24292D;
     --secondary-bg-color: #273238;
+    --tertiary-bg-color: #273238;
     --primary-border-color: #08679B;
     --primary-text-color: #fff;
     --primary-effect: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    --btn-bg-color: #17a2b8;
 }

@@ -47,7 +47,7 @@ function themeSelector() {
 themeSelector();
 
 // Async-Await for Projects Section
-// fetch api
+// fetch api + load more functionality
 async function fetchData() {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.json();
@@ -77,7 +77,7 @@ async function fetchData() {
 
         projectDescription.innerHTML = data.body;
         projectHeader.innerHTML = data.title;
-        projectPhoto.setAttribute('src', "./images/project1.png")
+        projectPhoto.setAttribute('src', `./images/project${Math.floor(Math.random() * 3 + 1)}.png`)
     }
     
     for (let i of data) {
