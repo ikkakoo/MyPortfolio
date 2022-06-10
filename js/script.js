@@ -65,8 +65,11 @@ async function fetchData() {
         projectDescription.classList.add("project--body");
         descriptionDiv = document.createElement('div')
         descriptionDiv.classList.add('description')
+        showHide = document.createElement('span')
+        showHide.id = 'show--hide'
 
         projectsWrapper.appendChild(projectDiv);
+        
         projectDiv.appendChild(projectPhoto);
         descriptionDiv.appendChild(projectHeader);
         descriptionDiv.appendChild(projectDescription);
@@ -83,14 +86,35 @@ async function fetchData() {
         }
     }
 
+    // View more functionality
+    let loadMoreBtn = document.getElementById('load--more--btn');
+    let showLessBtn = document.getElementById('show--less--btn');
+    let currentItem = 3;
+
+    loadMoreBtn.addEventListener('click', () => {
+        let projectArr =[...document.querySelectorAll('.project')];
+        for (let i in projectArr) {
+            if (i < currentItem + 3) {
+                projectArr[i].style.display = "block"
+            }
+        };
+        currentItem += 3;
+        if (currentItem >= projectArr.length) {
+            loadMoreBtn.style.display = "none"
+            showLessBtn.style.display = "block"
+        }
+        showLessBtn.onclick = function() {
+            currentItem = 3;
+            for (let i in projectArr) {
+                if (i >= currentItem) {
+                    projectArr[i].style.display = "none"
+                }
+            };
+            showLessBtn.style.display = "none";
+            loadMoreBtn.style.display = "block"
+        }
+    })
+    
 }
 
-
 fetchData();
-
-// View more functionality
-let viewMore = document.getElementById('view--more');
-viewMore.addEventListener('click', () => {
-    
-})
-
