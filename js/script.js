@@ -24,7 +24,7 @@ function themeSelector() {
     const currentTheme = localStorage.getItem("theme") || "defaultTheme";
 
     function activateTheme(themeName) {
-        themeFileLink.setAttribute("href", `/styles/themes/${themeName.id}.css`);
+        themeFileLink.setAttribute("href", `./styles/themes/${themeName.id}.css`);
     }
 
     defaultTheme.addEventListener("click", () => {
