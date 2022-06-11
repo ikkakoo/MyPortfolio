@@ -40,7 +40,7 @@ function themeSelector() {
 
     console.log(localStorage.getItem("theme"));
     () => {
-        themeFileLink.setAttribute("href", `/styles/themes/${currentTheme}.css`);
+        themeFileLink.setAttribute("href", `./styles/themes/${currentTheme}.css`);
     };
 }
 
