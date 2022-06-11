@@ -101,7 +101,7 @@ async function fetchData() {
         currentItem += 3;
         if (currentItem >= projectArr.length) {
             loadMoreBtn.style.display = "none"
-            showLessBtn.style.display = "block"
+            showLessBtn.style.display = "flex"
         }
         showLessBtn.onclick = function() {
             currentItem = 3;
@@ -111,10 +111,87 @@ async function fetchData() {
                 }
             };
             showLessBtn.style.display = "none";
-            loadMoreBtn.style.display = "block"
+            loadMoreBtn.style.display = "flex"
         }
     })
     
 }
 
 fetchData();
+
+// Scroll Behaviour
+// scroll to tp
+const scrollBtn = document.querySelector('.scroll--top');
+
+scrollBtn.addEventListener('click', () => {
+    document.documentElement.scrollTop = 0;
+})
+
+document.addEventListener("scroll", (e) => {
+    if (document.documentElement.scrollTop < 200) {
+        scrollBtn.style.display = "none";
+    } else {
+        scrollBtn.style.display = "block"
+    }
+})
+// navigation behaviour on scroll
+const body = document.body;
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll <= 0) {
+        body.classList.remove("scroll--up")
+    }
+
+    if (currentScroll > lastScroll && !body.classList.contains("scroll--down")) {
+        body.classList.remove("scroll--up");
+        body.classList.add("scroll--down");
+    }
+
+    if (currentScroll < lastScroll && body.classList.contains("scroll--down")) {
+        body.classList.remove("scroll--down");
+        body.classList.add("scroll--up");
+    }
+
+    lastScroll = currentScroll;
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
