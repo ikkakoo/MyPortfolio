@@ -233,6 +233,9 @@ body {
     width: 2px;
     background-color: rgb(130, 130, 130);
 }
+.division {
+    display: none;
+}
 .skills--section {
     height: 450px;
     background-color: var(--secondary-bg-color);
