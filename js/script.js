@@ -86,7 +86,7 @@ async function fetchData() {
         }
     }
 
-    // View more functionality
+    // view more functionality
     let loadMoreBtn = document.getElementById('load--more--btn');
     let showLessBtn = document.getElementById('show--less--btn');
     let currentItem = 3;
@@ -120,7 +120,7 @@ async function fetchData() {
 fetchData();
 
 // Scroll Behaviour
-// scroll to tp
+// scroll to top
 const scrollBtn = document.querySelector('.scroll--top');
 
 scrollBtn.addEventListener('click', () => {
@@ -158,24 +158,86 @@ window.addEventListener("scroll", () => {
     lastScroll = currentScroll;
 })
 
+// Form Validation
+const form = document.querySelector('form');
+const fnameInput = document.querySelector('input[name="fname"]');
+const lnameInput = document.querySelector('input[name="lname"]');
+const emailInput = document.querySelector('input[name="email"]');
+const subjectInput = document.querySelector('input[name="subject"]');
+const messageInput = document.querySelector('textarea');
+const logo = document.querySelector('.contact--logo')
+const validFormResponse = document.querySelector('.valid--form--response')
+const formContainer = document.querySelector('.form--conatiner')
 
+const isValidEmail = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  };
 
+let isValid = false;
+let validationOn = false;
 
+function resetInput(element) {
+    element.classList.remove('invalid');
+    element.nextElementSibling.classList.add('hidden');
+}
 
+function invalidateInput(element) {
+    element.nextElementSibling.classList.remove('hidden');
+    element.classList.add('invalid');
+}
 
+let validateInputs = () => {
+    isValid = true;
+    resetInput(fnameInput);
+    resetInput(lnameInput);
+    resetInput(emailInput);
+    resetInput(messageInput);
+    if (!validationOn) return;
 
+    if (!fnameInput.value) {
+        isValid = false;
+        invalidateInput(fnameInput)
+    }
 
+    if (!lnameInput.value) {
+        isValid = false;
+        invalidateInput(lnameInput)
+    }
 
+    if (!isValidEmail(emailInput.value)) {
+        isValid = false;
+        invalidateInput(emailInput)
+    }
+    
+    if (!messageInput.value) {
+        isValid = false;
+        invalidateInput(messageInput)
+    }
+}
 
+form.addEventListener('submit', (e) => {
+    validationOn = true;
+    e.preventDefault();
+    validateInputs();
+    if (isValid) {
+        formContainer.remove();
+        validFormResponse.classList.remove('hidden');
+    }
+})
 
-
-
-
-
-
-
-
-
+fnameInput.addEventListener('input', () => {
+    validateInputs();
+})
+lnameInput.addEventListener('input', () => {
+    validateInputs();
+})
+emailInput.addEventListener('input', () => {
+    validateInputs();
+})
+messageInput.addEventListener('input', () => {
+    validateInputs();
+})
 
 
 

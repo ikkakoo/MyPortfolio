@@ -195,16 +195,33 @@
         <div class="contact--section--container" id="contact">
             <div class="form--conatiner">
                 <div id="contact--section--header">Get In Touch</div>
-                <div class="contact--section">
-                    <input type="text" placeholder="enter first name..." class="inp">
-                    <input type="text" placeholder="enter last name..." class="inp">
-                    <input type="text" placeholder="enter email..." class="inp">
-                    <input type="text" placeholder="subject..." class="inp">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="type your text here..." class="text"></textarea>
+                <form class="contact--section">
+                    <div class="input--div">
+                        <input name="fname" type="text" placeholder="enter first name..." class="inp fname">
+                        <span class="error-hint hidden">Your name is required.</span>
+                    </div>
+                    <div class="input--div">
+                        <input name="lname" type="text" placeholder="enter last name..." class="inp lname">
+                        <span class="error-hint hidden">Your last name is required.</span>
+                    </div>
+                    <div class="input--div">
+                        <input name="email" type="email" placeholder="enter email..." class="inp email">
+                        <span class="error-hint hidden">Your email is required.</span>
+                    </div>
+                    <div class="input--div">
+                        <input name="subject" type="text" placeholder="subject..." class="inp subject">
+                    </div>
+                    <div class="text--div">
+                        <textarea name="textarea" id="" cols="30" rows="10" placeholder="type your message here..." class="text"></textarea>
+                        <span class="error-hint hidden">Message is required.</span>
+                    </div>
+                    
                     <button type="submit" id="send-btn">Send</button>
-                </div>
+                </form>
                 <img src="./images/msg logo.png" alt="" class="contact--logo">
-            </div>    
+                
+            </div>
+            <div class="valid--form--response hidden">Thank you for reaching out, I'll get back to you as soon as possible!</div>    
         </div>
 
     </div>
