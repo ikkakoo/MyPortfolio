@@ -252,15 +252,56 @@ messageInput.addEventListener('input', () => {
     validateInputs();
 })
 
+// Slider
+const rightArrow = document.getElementById('right--arrow');
+const leftArrow = document.getElementById('left--arrow');
+const sliderContent1 = document.querySelector('.slider--content1')
+const sliderContent2 = document.querySelector('.slider--content2')
+const sliderContent3 = document.querySelector('.slider--content3')
+const sliderWrapper = document.querySelector('.about--me')
+
+let data = [
+    {
+        id: 1,
+        text: sliderContent1.innerHTML
+    },
+    {
+        id: 2,
+        text: sliderContent2.innerHTML
+    },
+    {
+        id: 3,
+        text: sliderContent3.innerHTML
+    },
+]
+
+let sliderIndex = 0;
+
+function nextSlide () {
+    sliderIndex++;
+    if (sliderIndex > data.length - 1) {
+        sliderIndex = 0
+    }
+    sliderWrapper.innerHTML = ''
+    sliderWrapper.innerHTML = data[sliderIndex].text
+}
+
+function prevSlide () {
+    sliderIndex--;
+    if (sliderIndex < 0) {
+        sliderIndex = data.length - 1
+    }
+    sliderWrapper.innerHTML = ''
+    sliderWrapper.innerHTML = data[sliderIndex].text
+}
 
 
-
-
-
-
-
-
-
+rightArrow.addEventListener('click', () => {
+    nextSlide();
+})
+leftArrow.addEventListener('click', () => {
+    prevSlide();
+})
 
 
 

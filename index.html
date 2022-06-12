@@ -38,7 +38,7 @@
         <!-- Hero Section -->
         <main class="hero--section" id="home">
             <div class="photo--wrapper">
-                <img src="./images/photo.jpg" alt="" class="photo">
+                <img src="./images/12.jpeg" alt="" class="photo">
                 <div class="header">
                     <h1>Irakli Dzvelaia</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi molestiae, nemo id voluptas harum velit quia! Exercitationem delectus veritatis dicta sed dolor? Blanditiis corrupti incidunt quae voluptatum voluptate ab explicabo, perspiciatis libero dignissimos hic mollitia!./p>
@@ -49,14 +49,23 @@
                 <h2>My Story:</h2>
                 <hr>
                 <div class="slider">
-                    <i class="fa-solid fa-angle-left"></i>
+                    <i class="fa-solid fa-angle-left" id="left--arrow" style="cursor: pointer;"></i>
 
                     <div class="about--me">
-                        <p>I Was Financial Analyst Once,</p>
-                        <p>Now I'm a Full-Stack Developer..</p>
+                        <!-- 1st slide -->
+                        <p class="slider--content1">I Was Financial Analyst Once, Now I'm a Full-Stack Developer..</p>
+                        <!-- <p class="slider--content"></p> -->
+
+                        <!-- 2nd slide -->
+                        <p class="hidden slider--content2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel eius quos iusto quasi soluta consectetur.</p>
+
+
+                        <!-- 3rd slide -->
+                        <p class="hidden slider--content3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, neque!</p>
+
                     </div>
 
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i class="fa-solid fa-angle-right" id="right--arrow" style="cursor: pointer;"></i>
                 </div>
                 <div class="dot--wrapper">
                     <div class="dot"></div>
@@ -91,6 +100,8 @@
             <hr class="division">
             <!-- skill proficiency -->
             <div class="skills--wrapper">
+                <h2>Skills</h2>
+                <hr>
                 <!-- python -->
                 <div class="skill--container">
                     <h3>Python</h3>
