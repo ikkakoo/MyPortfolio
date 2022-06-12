@@ -259,19 +259,25 @@ const sliderContent1 = document.querySelector('.slider--content1')
 const sliderContent2 = document.querySelector('.slider--content2')
 const sliderContent3 = document.querySelector('.slider--content3')
 const sliderWrapper = document.querySelector('.about--me')
+const slideDot1 = document.querySelector('.dot1')
+const slideDot2 = document.querySelector('.dot2')
+const slideDot3 = document.querySelector('.dot3')
 
 let data = [
     {
         id: 1,
-        text: sliderContent1.innerHTML
+        text: sliderContent1.innerHTML,
+        dot: slideDot1,
     },
     {
         id: 2,
-        text: sliderContent2.innerHTML
+        text: sliderContent2.innerHTML,
+        dot: slideDot2,
     },
     {
         id: 3,
-        text: sliderContent3.innerHTML
+        text: sliderContent3.innerHTML,
+        dot: slideDot3,
     },
 ]
 
@@ -283,7 +289,9 @@ function nextSlide () {
         sliderIndex = 0
     }
     sliderWrapper.innerHTML = ''
-    sliderWrapper.innerHTML = data[sliderIndex].text
+    sliderWrapper.innerHTML = data[sliderIndex ].text
+    // console.log(data[sliderIndex].dot);
+    
 }
 
 function prevSlide () {
