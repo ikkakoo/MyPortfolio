@@ -1,8 +1,10 @@
 // Bar Functionality Header section
+// accessing dom elements
 const hamburger = document.querySelector(".hamburger");
 const navlist = document.querySelector(".nav--list");
 const listitem = document.querySelector(".bar");
 
+// burger icon functionality
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle("active");
     navlist.classList.toggle("active");
@@ -10,23 +12,27 @@ hamburger.addEventListener('click', () => {
 
 });
 
+// hide menu on click
 document.querySelectorAll(".nav--item").forEach(element => element.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navlist.classList.remove("active");
     listitem.classList.remove("active");
 }));
 
+
 // Change Theme
 function themeSelector() {
+    // accessing dom elements
     const defaultTheme = document.getElementById("defaultTheme");
     const dark = document.getElementById("dark");
     const themeFileLink = document.getElementById("theme--link");
     const currentTheme = localStorage.getItem("theme") || "defaultTheme";
 
     function activateTheme(themeName) {
-        themeFileLink.setAttribute("href", `./styles/themes/${themeName.id}.css`);
+        themeFileLink.setAttribute("href", `./styles/themes/${themeName.id}.css`); // change theme file in link tag
     }
 
+    // activate and save chosen theme
     defaultTheme.addEventListener("click", () => {
         activateTheme(defaultTheme);
         localStorage.setItem("theme", "defaultTheme");
@@ -159,6 +165,7 @@ window.addEventListener("scroll", () => {
 })
 
 // Form Validation
+// accessing dom elements
 const form = document.querySelector('form');
 const fnameInput = document.querySelector('input[name="fname"]');
 const lnameInput = document.querySelector('input[name="lname"]');
@@ -169,14 +176,17 @@ const logo = document.querySelector('.contact--logo')
 const validFormResponse = document.querySelector('.valid--form--response')
 const formContainer = document.querySelector('.form--conatiner')
 
+// regex for email validation
 const isValidEmail = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   };
 
+// declaring validation variables
 let isValid = false;
 let validationOn = false;
 
+// helper functions
 function resetInput(element) {
     element.classList.remove('invalid');
     element.nextElementSibling.classList.add('hidden');
@@ -187,6 +197,7 @@ function invalidateInput(element) {
     element.classList.add('invalid');
 }
 
+// validate inputs (fname,lname, email, textarea)
 let validateInputs = () => {
     isValid = true;
     resetInput(fnameInput);
@@ -216,6 +227,7 @@ let validateInputs = () => {
     }
 }
 
+// success response
 form.addEventListener('submit', (e) => {
     validationOn = true;
     e.preventDefault();
@@ -226,6 +238,7 @@ form.addEventListener('submit', (e) => {
     }
 })
 
+// ----
 fnameInput.addEventListener('input', () => {
     validateInputs();
 })

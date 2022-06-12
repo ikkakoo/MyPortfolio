@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
+/* General styles */
 html {
     scroll-behavior: smooth;
 }
@@ -11,10 +12,11 @@ html {
     text-decoration: none;
 }
 a { color: inherit; }
+
 /* Body Styles */
 body {
     transition: 0.3s;
-    /* font-family: 'Source Code Pro', monospace; */
+    font-family: 'Source Code Pro', monospace;
 }
 .container {
     display: block;
